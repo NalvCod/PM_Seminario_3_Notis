@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PM_Seminario_3_Notificaciones</string>
+    <string name="channel_name">Nombre Canal Notis</string>
+    <string name="channel_description">Descripcion del canal</string>
+</resources>
