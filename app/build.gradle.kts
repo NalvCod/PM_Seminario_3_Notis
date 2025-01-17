@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.pm_seminario_3_notificaciones"
-        minSdk = 28
+        minSdk = 34
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -33,7 +33,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
+
 
 dependencies {
 
