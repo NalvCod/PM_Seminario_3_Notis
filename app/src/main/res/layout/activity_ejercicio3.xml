@@ -6,27 +6,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ejercicio3"
-    android:layout_margin="20dp">
+ >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+
+    <ImageView
+        android:id="@+id/atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/baseline_arrow_back_ios_24"/>
 
     <EditText
-        android:id="@+id/texto1"
+        android:id="@+id/tituloNoti"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        android:hint="Introduce el título"
+        android:hint="Introduce el título de la notificación"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/atras" />
 
     <EditText
-        android:id="@+id/texto2"
+        android:id="@+id/texto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        android:hint="Introduce el título"
+        android:hint="Introduce el texto de la notificación"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/texto1"
-        app:layout_constraintTop_toBottomOf="@id/texto1" />
+        app:layout_constraintStart_toStartOf="@+id/tituloNoti"
+        app:layout_constraintTop_toBottomOf="@id/tituloNoti" />
 
     <TextView
         android:id="@+id/titulo1"
@@ -34,7 +46,7 @@
         android:layout_height="wrap_content"
         android:text="Selecciona el icono"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/texto2"/>
+        app:layout_constraintTop_toBottomOf="@id/texto"/>
 
     <Spinner
         android:id="@+id/spinner1"
@@ -47,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Selecciona el icono"
+        android:text="Selecciona la imagen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinner1" />
 
@@ -67,11 +79,11 @@
         app:layout_constraintTop_toBottomOf="@id/spinner2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonmenos"
+        android:id="@+id/botonmass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="-"
+        android:text="+"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cantidadBotones"
@@ -83,18 +95,18 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/botonmenos"
-        app:layout_constraintEnd_toStartOf="@+id/botonmenos"
+        app:layout_constraintBottom_toBottomOf="@+id/botonmass"
+        app:layout_constraintEnd_toStartOf="@+id/botonmass"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/botonmas"
-        app:layout_constraintTop_toTopOf="@id/botonmas" />
+        app:layout_constraintStart_toEndOf="@+id/botonmenos"
+        app:layout_constraintTop_toTopOf="@id/botonmenos" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botonmas"
+        android:id="@+id/botonmenos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="+"
+        android:text="-"
         android:textSize="30dp"
         app:layout_constraintEnd_toStartOf="@+id/cantidadBotones"
         app:layout_constraintHorizontal_bias="0.5"
@@ -109,13 +121,16 @@
         android:hint="Nombre de los botones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botonmas" />
+        app:layout_constraintTop_toBottomOf="@id/botonmenos" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENVIAR NOTIFICACIÓN"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
